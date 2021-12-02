@@ -22,12 +22,12 @@ module.exports.run = function (csv) {
 	let arr = [];
 
 	for (i = 1; i < lines.length; i++) {
-		let o = {};
+		let obj = {};
 		let currentLineValues = lines[i].split(',');
 		for (j = 0; j < objectProperties.length; j++) {
-			o[objectProperties[j]] = currentLineValues[j];
+			obj[objectProperties[j]] = currentLineValues[j];
 		}
-		arr.push(o)
+		arr.push(obj)
 	}
 	return arr;
 };
